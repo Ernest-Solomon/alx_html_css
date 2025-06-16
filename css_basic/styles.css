@@ -34,3 +34,50 @@ header, footer {
     flex-direction: column;
   }
 }
+
+.logo {
+  font-size: 2em;
+  color: gold;
+  margin-right: 20px;
+}
+
+header ul a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+header ul a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+article {
+  padding: 20px;
+  background: #fff7cc;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0003;
+}
+
+article h1, article h2, article h3 {
+  color: #ff9900;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ff9900;
+}
+
+th {
+  background: #ffcc5b;
+  color: #fff;
+}
