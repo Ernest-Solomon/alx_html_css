@@ -572,3 +572,90 @@ body {
   }
 }
 
+
+
+/* --- Footer Section --- */
+
+.main-footer {
+  background-color: #1a1a2e; /* Dark background color for the footer */
+  color: white; /* Default text color for the footer */
+  padding: 2rem 2rem 1rem 2rem; /* Top, right, bottom, left padding */
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between; /* Pushes logo to left, social icons to right */
+  align-items: center; /* Vertically align items */
+  max-width: 1200px; /* Limit the width of content, adjust as needed */
+  margin: 0 auto 1.5rem auto; /* Center top content, add space below */
+  padding-bottom: 1.5rem; /* Add padding at the bottom of the top section */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator line */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between smiley icon and text */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-smiley-icon {
+  width: 30px; /* Size of the smiley icon */
+  height: 30px;
+  /* If your smiley-icon.png is not white, you might need a filter */
+  /* filter: brightness(0) invert(1); */ /* This will turn a black icon white */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem; /* Space between social icons */
+}
+
+.social-icons a {
+  color: white; /* White color for icons */
+  font-size: 1.5rem; /* Size of the social icons */
+  transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+.social-icons a:hover {
+  color: #c271ff; /* Purple hover effect */
+}
+
+.footer-bottom {
+  text-align: center; /* Center the copyright text */
+  margin-top: 1rem; /* Space above copyright */
+  opacity: 0.7; /* Make copyright text slightly subtle */
+}
+
+/* --- Responsive Adjustments for Footer --- */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Stack logo and social icons vertically */
+    gap: 1.5rem; /* Adjust gap when stacked */
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  .footer-logo {
+    margin-bottom: 0.5rem; /* Space below logo when stacked */
+  }
+  .social-icons {
+    margin-top: 0.5rem; /* Space above social icons when stacked */
+  }
+  .main-footer {
+    padding: 1.5rem 1rem 0.75rem 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 1rem;
+  }
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+  .main-footer p {
+    font-size: 0.8rem;
+  }
+}
