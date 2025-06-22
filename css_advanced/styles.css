@@ -7,21 +7,23 @@
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  color: white;
+  color: white; /* Default text color for the body */
+  /* Replaced 'background: #000;' with the image background */
   background: url("background-image.png") center center / cover no-repeat;
-  min-height: 100vh;
+  min-height: 100vh; /* Ensures the background covers the full viewport height */
 }
 
 /* Hero Section */
 .hero {
-  height: 100vh;
+  /* Removed 'background: url("background-image.png") center center / cover no-repeat;' */
+  height: 100vh; /* Still ensures the hero section takes full viewport height */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* This centers content horizontally */
+  align-items: center; /* This centers hero content horizontally */
   text-align: center;
   padding: 2rem;
-  color: white;
+  /* color: white; - This is now redundant if body color is white, but harmless */
 }
 
 /* Logo */
@@ -44,6 +46,16 @@ body {
   display: flex;
   gap: 2rem;
   font-size: 1rem;
+}
+
+/* MODIFIED: Link colors in navigation */
+.nav a {
+  color: white; /* Changed COURSES, PRICING, LOGIN to white */
+  text-decoration: none; /* Removed underline */
+}
+
+.nav a:hover {
+  color: #c271ff; /* Optional: Hover effect for navigation links */
 }
 
 /* Main Heading */
@@ -79,31 +91,30 @@ body {
   background: #a653e7;
 }
 
-/* New: Container for subsequent content */
+/* NEW: Container for subsequent content (Learn from the pros and Testimonials) */
 .content-section {
-  max-width: 960px; /* Or a width that matches your desired content width */
-  margin: 0 auto; /* This centers the container horizontally */
-  padding: 2rem; /* Add some padding around the content */
-  text-align: center; /* This will center the h2 inside it */
+  max-width: 960px; /* Adjust this width as needed for your content */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 2rem; /* Adds padding around the content within this section */
+  text-align: center; /* Centers inline content and text within this section */
 }
-
 
 /* Learn From the Pros */
 .section-title {
-  margin-top: 4rem; /* Keep this margin for spacing from the hero section */
+  margin-top: 4rem; /* Spacing from the hero section */
   font-size: 1.5rem;
   color: #c271ff;
-  /* text-align: center;  No longer explicitly needed here if parent is centered or uses text-align center */
+  /* text-align: center; is now handled by .content-section */
 }
 
 /* Testimonials */
 .testimonials {
   margin-top: 2rem;
   display: flex;
-  justify-content: center; /* This centers the flex items within the testimonials container */
+  justify-content: center; /* Centers the flex items (testimonial cards) */
   flex-wrap: wrap;
   gap: 2rem;
-  /* padding: 2rem; // Already handled by .content-section */
+  /* padding: 2rem; is now handled by .content-section */
 }
 
 .testimonial {
@@ -128,6 +139,7 @@ body {
   font-size: 0.875rem;
   opacity: 0.8;
 }
+
 
 /* CSS for Testimonial Quote Section */
 
