@@ -375,3 +375,126 @@ body {
     font-size: 0.85rem;
   }
 }
+
+
+
+/* --- Free Membership Section --- */
+
+.free-membership-section {
+  background-color: #28283E; /* Dark background color for the section */
+  padding: 4rem 2rem; /* Ample padding for spacing */
+  text-align: center; /* Center the title and button */
+  color: white; /* Default text color for this section */
+}
+
+.membership-title {
+  font-size: 2.5rem; /* Larger font size for the main title */
+  font-weight: 700;
+  color: #c271ff; /* Purple color for "Free membership" */
+  margin-bottom: 3rem; /* Space below the title */
+}
+
+.membership-features-grid {
+  display: grid;
+  /* For larger screens: 4 columns, responsive */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem; /* Space between feature items */
+  max-width: 1000px; /* Limit the width of the grid */
+  margin: 0 auto 3rem auto; /* Center the grid, add space below before the button */
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content within each feature item */
+  text-align: center; /* Ensure text is centered */
+  padding: 1rem; /* Some internal padding if needed */
+}
+
+.smiley-icon {
+  width: 80px; /* Size of the smiley icon */
+  height: 80px;
+  margin-bottom: 1.5rem; /* Space below the icon */
+  /* You might want to apply a filter if the icon itself isn't purple */
+  /* filter: invert(39%) sepia(80%) saturate(1637%) hue-rotate(240deg) brightness(90%) contrast(100%); */
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Space below the feature title */
+  color: white; /* Ensure feature title is white */
+}
+
+.feature-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc; /* Slightly lighter white/gray for description */
+}
+
+/* Reusing .cta from your existing CSS for the button */
+.membership-cta {
+  /* No specific styles needed here unless different from existing .cta */
+  /* You might want to adjust its margin-top if the grid's margin-bottom isn't enough */
+  margin-top: 2rem; /* Example adjustment */
+}
+
+
+/* Button in the Free Membership section */
+.free-membership-section .membership-cta {
+  background: #c271ff; /* Set the purple background color for the button */
+  border: none; /* Remove default button border */
+  border-radius: 25px; /* Make it rounded */
+  color: white; /* Text color */
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.8rem 2rem; /* Padding inside the button */
+  cursor: pointer;
+  transition: background 0.3s; /* Smooth transition on hover */
+}
+
+.free-membership-section .membership-cta:hover {
+  background: #a653e7; /* Darker purple on hover */
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .membership-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for slightly fewer columns on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .free-membership-section {
+    padding: 3rem 1rem; /* Less padding on smaller screens */
+  }
+  .membership-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .membership-features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust columns for smaller screens */
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .membership-features-grid {
+    grid-template-columns: 1fr; /* Stack items in a single column on very small screens */
+    max-width: 300px; /* Limit width of stacked items */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .smiley-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .feature-item h3 {
+    font-size: 1.1rem;
+  }
+  .feature-item p {
+    font-size: 0.85rem;
+  }
+}
+
