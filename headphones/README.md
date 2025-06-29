@@ -1,2 +1,4 @@
-#DESIGNING WEB FROM SCRATCH
-This project is focused on web design from scratch
+**DESIGNING WEB FROM SCRATCH**
+
+
+This Project is focused on designing a website from scratch
