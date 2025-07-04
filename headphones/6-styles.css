@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+              url('headphones_hero_1.jpg') no-repeat center center/cover;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 40px; /* Adjust the size as needed */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+  color: #FF6565;
+}
+
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #f14e4e;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.cta-button:hover,
+.cta-button:active {
+  opacity: 0.9;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Responsive for screens 480px and below */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    font-size: 0.8em;
+    margin-left: 10px;
+  }
+
+  .hero-content {
+    top: 35%;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .bottom-text {
+    font-size: 0.8em;
+    padding-bottom: 10px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+}
+
+
+/* === What We Do Section === */
+
+.what-we-do h2 {
+  font-size: 2em;
+  color: #0a0a23;
+  margin-bottom: 20px;
+  text-align: center;  /* ✅ Add this line */
+}
+
+.what-we-do .intro-text {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.feature-box {
+  flex: 1 1 22%;
+  min-width: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-box .icon {
+  font-size: 40px;
+  color: #ff6565;
+  margin-bottom: 10px;
+}
+
+.feature-box h3 {
+  font-size: 1.2em;
+  color: #0a0a23;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 0.95em;
+  color: #444;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
+/* Entire section has no background */
+.results {
+  padding: 60px 20px;
+  text-align: center;
+  background: none; /* removes any background */
+  color: #000;       /* sets text to black */
+}
+
+.results h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.results .description {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.result-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Pentagon styling using clip-path */
+.pentagon {
+  width: 140px;
+  height: 140px;
+  background-color: #ff6565; /* red-pink color */
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+.pentagon h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.pentagon p {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+.results {
+  color: black; /* or use #000 */
+}
+
+
+/* Contact Form Section */
+.contact-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-container h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: #0a1f44;
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  text-align: left;
+  font-weight: 500;
+  color: #0a1f44;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Button Styles */
+.cta-button {
+  background-color: #ff6565;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover,
+.cta-button:active {
+  opacity: 0.9;
+}
+
+
+.footer {
+  background-color: #031526; /* dark navy blue */
+  padding: 40px 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left .logo {
+  height: 40px;
+}
+
+.footer-left .brand {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.footer-right a img {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+  transition: transform 0.3s;
+}
+
+.footer-right a:hover img {
+  transform: scale(1.1);
+}
