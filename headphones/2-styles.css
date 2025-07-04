@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+              url('headphones_hero_1.jpg') no-repeat center center/cover;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 40px; /* Adjust the size as needed */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a:active {
+  color: #FF6565;
+}
+
+.hero-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #f14e4e;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.cta-button:hover,
+.cta-button:active {
+  opacity: 0.9;
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+/* Responsive for screens 480px and below */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    font-size: 0.8em;
+    margin-left: 10px;
+  }
+
+  .hero-content {
+    top: 35%;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .bottom-text {
+    font-size: 0.8em;
+    padding-bottom: 10px;
+  }
+
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+}
+
+
+/* === What We Do Section === */
+
+.what-we-do h2 {
+  font-size: 2em;
+  color: #0a0a23;
+  margin-bottom: 20px;
+  text-align: center;  /* ✅ Add this line */
+}
+
+.what-we-do .intro-text {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.feature-box {
+  flex: 1 1 22%;
+  min-width: 200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.feature-box .icon {
+  font-size: 40px;
+  color: #ff6565;
+  margin-bottom: 10px;
+}
+
+.feature-box h3 {
+  font-size: 1.2em;
+  color: #0a0a23;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 0.95em;
+  color: #444;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
+/* === Results Section === */
+.results {
+  background: linear-gradient(rgba(10, 10, 25, 0.85), rgba(10, 10, 25, 0.85)),
+              url('headphones_hero_2.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.results .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.results h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.results .intro-text {
+  font-size: 1em;
+  color: #dddddd;
+  margin-bottom: 50px;
+  line-height: 1.6;
+}
+
+.result-boxes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.result-boxes .box {
+  flex: 1 1 22%;
+  background-color: #ff6565;
+  clip-path: polygon(50% 0%, 100% 30%, 100% 100%, 0% 100%, 0% 30%);
+  padding: 40px 10px;
+  color: white;
+  text-align: center;
+}
+
+.result-boxes .box h3 {
+  font-size: 2em;
+  margin: 0 0 10px;
+}
+
+.result-boxes .box p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .result-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-boxes .box {
+    width: 80%;
+    max-width: 300px;
+  }
+}
